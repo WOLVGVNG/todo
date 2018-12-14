@@ -24,6 +24,7 @@
 
 <script>
 let i = 0;
+let value;
 
 export default {
   name: 'app',
@@ -48,14 +49,14 @@ export default {
     },
     deleteItem(id) {
       this.Items[id] = { id: id, value: '' };
-      let value = this.value;
+      value = this.value;
       this.value = 'update';
       this.value = value;
     },
     changeState(id) {
       if (this.Items[id].done === true) this.Items[id].done = false;
       else this.Items[id].done = true;
-      let value = this.value;
+      value = this.value;
       this.value = 'update';
       this.value = value;
     },
